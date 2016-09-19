@@ -2,13 +2,16 @@ $azure: #008EFF;
 $coral-pink: #ff5f74;
 $sky-blue: #44acf2;
 $light-peach: #ffd9a5;
+$yellow-orange: #ffb300;
+$pale-grey: #f5f8fa;
+$robin-egg-blue: #90DEFF;
+
 @charset "UTF-8";
-
 @import 'layout';
-
 @media screen and (max-width:768px){
 
 }
+
 
 nav {
   position: fixed;
@@ -58,7 +61,7 @@ nav {
         z-index: -1;
         transform: scale(0) translateY(-50%);
         transform-origin: 50% 0%;
-        transition: .3s .3s cubic-bezier(0, 0.25, 0.4, 1.82);
+        transition: .3s cubic-bezier(0, 0.25, 0.4, 1.82);
       }
     }
 
@@ -78,14 +81,13 @@ nav {
       padding: 6px 22px;
       transition: .2s ease-in-out;
       cursor: pointer;
-    }
 
-    .action:hover {
-      background-color: $sky-blue;
+      &:hover {
+        background-color: $sky-blue;
+      }
     }
   }
 }
-
 
 .call-btn {
   width: 144px;
@@ -98,12 +100,13 @@ nav {
   font-weight: 600;
   cursor: pointer;
   transition: .2s ease-in-out;
+
+  &:hover {
+    background-color: $sky-blue;
+  }
 }
 
-.call-btn:hover {
-  background-color: $sky-blue;
-}
-
+// 讓夢想中的未來就地發生
 .section-1 {
   height: 420px;
   background-color: white;
@@ -125,6 +128,7 @@ nav {
   }
 }
 
+// 為什麼是貝殼放大
 .section-2 {
   height: 476px;
   background-image: url(/assets/img/main/line-bg.png);
@@ -134,8 +138,13 @@ nav {
     width: 525px;
     margin-top: 24px;
   }
+
+  .huge-data {
+    margin: 30px 0 0 50px;
+  }
 }
 
+// 數據展示
 .section-3 {
   height: 370px;
   width: 1350px;
@@ -143,17 +152,120 @@ nav {
   margin-top: -170px;
   background-color: white;
   box-shadow: 5px 8px 41px 0 rgba(159, 164, 167, 0.25);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .average {
+    color: $yellow-orange;
+
+    h4 {
+      max-width: 280px;
+    }
+  }
+
+  .succeed {
+    color: $coral-pink;
+
+    h4 {
+      max-width: 343px;
+    }
+  }
+
+  .media-report {
+    color: $azure;
+  }
+
+  .number {
+    font-family: HelveticaNeueLTStd-BdCnO;
+    font-size: 103px;
+    line-height: 1.2;
+    margin-bottom: -20px;
+  }
+
+  .unit {
+    font-size: 23px;
+    font-weight: 600;
+  }
+
+  h4 {
+    margin: 30px auto 0 auto;
+  }
 }
 
+// 0個專案跑路
 .section-4 {
-  height: 320px;
+  height: 115px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .fail {
+    color: $azure;
+    font-size: 36px;
+    font-family: HelveticaNeueLTStd-BdCnO;
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
 
+// 我們提供什麼樣的服務
 .section-5 {
   height: 516px;
+  background-color: $pale-grey;
+  padding-top: 22px;
 }
 
-.huge-data {
-  margin: 30px 0 0 50px;
+// 瞭解更多
+.section-6 {
+  height: 135px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .call-btn {
+    display: inline-block;
+    margin-left: 35px;
+  }
+
 }
+
+// 聽聽他們怎麼說
+.section-7 {
+  // not sure
+  height: 300px;
+  background-color: $azure;
+  padding-top: 22px;
+
+  h2 {
+    color: white;
+  }
+
+  .subtitle {
+    color: $robin-egg-blue;
+  }
+}
+
+.section-8 {
+  height: 436px ;
+
+}
+
+.section-9 {
+  // not sure
+  height: 438px;
+  background-color: #D0EFFC;
+}
+
+.section-10 {
+  height: 436px;
+}
+
+footer {
+
+}
+
+
+
+
 

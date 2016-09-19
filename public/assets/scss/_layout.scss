@@ -20,12 +20,11 @@ a {
 
 h1,h2,h3,h4 {
   margin: 0;
+  line-height: 1.6;
 }
 
 h1 {
-  // font-size: 52px;
-  // color: $azure;
-  // line-height: 73px;  
+
 }
 
 h2 {
@@ -49,16 +48,19 @@ h5 {
 	font-size: 14px;
 	line-height: 1;
 	color: #676D70;
+  margin-bottom: 0;
+  font-weight: 400;
 }
 
 .flex { display: flex; }
 .flex-1 { flex: 1; }
 .flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+.flex-4 { flex: 4; }
+.flex-5 { flex: 5; }
 
 
-.ghost {
-  height: 58px;
-}
+.ghost { height: 58px; }
 
 .container {
   width: 1074px;
