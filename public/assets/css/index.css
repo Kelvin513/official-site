@@ -84,6 +84,18 @@ h5 {
           flex: 5;
 }
 
+.flex-sa {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.flex-sb {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .ghost {
   height: 58px;
 }
@@ -339,7 +351,7 @@ nav .content .action:hover {
 
 .section-7 {
   height: 300px;
-  background-color: #008EFF;
+  background-color: #44acf2;
   padding-top: 22px;
 }
 
@@ -349,6 +361,35 @@ nav .content .action:hover {
 
 .section-7 .subtitle {
   color: #90DEFF;
+}
+
+.section-7 .news {
+  width: 308px;
+  height: 201px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 3px #44acf2;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.section-7 .news h4 {
+  margin-top: 40px;
+}
+
+.section-7 .news .r-h4 {
+  color: #ff5f74;
+  margin-top: 50px;
+}
+
+.section-7 .section-7-2 {
+  background-color: #f1f2f3;
+  height: 300px;
+  margin-top: -75px;
+}
+
+.section-7 .section-7-2 .container {
+  padding-top: 105px;
 }
 
 .section-8 {
