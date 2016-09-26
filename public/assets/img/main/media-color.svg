@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>媒體部/彩色</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="媒體部/彩色">
+            <rect id="Rectangle-39-Copy-29" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="70" height="70"></rect>
+            <path d="M50,46.3783784 L50,20.0074612 C50,18.9003455 49.1083227,18 48.008383,18 L21.991617,18 C20.8978404,18 20,18.898771 20,20.0074612 L20,50.9925388 C20,52.0996545 20.8916773,53 21.991617,53 L44.375,53 L44.375,48.3858396 C44.375,47.2771494 45.2728404,46.3783784 46.366617,46.3783784 L50,46.3783784 Z" id="Combined-Shape" stroke="#008EFF" stroke-width="2"></path>
+            <rect id="Rectangle-134-Copy-2" fill="#FF5F74" x="24.6875" y="23.6756757" width="21.5625" height="1.89189189" rx="0.945945946"></rect>
+            <rect id="Rectangle-134-Copy-3" fill="#FF5F74" x="24.6875" y="28.4054054" width="21.5625" height="1.89189189" rx="0.945945946"></rect>
+            <rect id="Rectangle-134-Copy-4" fill="#FF5F74" x="24.6875" y="33.1351351" width="21.5625" height="1.89189189" rx="0.945945946"></rect>
+            <path d="M50,47.3243243 L45.3125,53" id="Path-152" stroke="#008EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
