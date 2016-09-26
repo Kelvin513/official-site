@@ -2,13 +2,14 @@
 @import 'variable';
 @import 'index';
 @import 'layout';
+$slider-avatar:70px;
 
 nav {
+  z-index:10;
   a {
     color:#008EFF;
   }
 }
-
 .department {
   height: 20vh; 
   width: 100%;
@@ -78,6 +79,7 @@ nav {
       -webkit-align-items: center;
       align-items: center;
       cursor:pointer;
+      overflow: hidden;
       .avatar {
         -webkit-border-radius: 100px; 
         border-radius: 100px;
@@ -86,7 +88,8 @@ nav {
         position: relative;
         background: $robin-egg-blue; 
         background-size: cover;
-        overflow: hidden; 
+        overflow: hidden;
+        transition:.3s linear;
       }
       p {
         text-align: center;
@@ -100,14 +103,15 @@ nav {
         margin-top:0; 
       }
       .cover {
-        background:$azure; 
+        background:$azure;
+        overflow: hidden; 
         width:100%;
-        height:0%;
-        overflow: hidden;
-        opacity:0.6;
-        transition:.2s linear;
+        height:100%;
+        border-radius:100px;
+        opacity:0;
+        transition:.3s linear;
         margin-bottom:0px;
-        position: absolute;
+        position: relative;
         bottom:0px;
         left:0px;
         display: flex ;
@@ -118,12 +122,24 @@ nav {
         color: #FFF;
         font-weight: 600;  
       }
-      &:hover .cover{
-        height:100%;
+      .cover span {
+        transform:scale(2, 2);
+        opacity:0;
+        transition:.3s linear;
       }
-
-      &:hover .avator {
-        background-size:150%;
+      &:hover .cover{
+        opacity:0.5;
+        overflow: hidden;
+      }
+      &:hover .cover span {
+        opacity:1;
+        transform:scale(1,1);
+      }
+      
+      &:hover .avatar {
+        //background-size:120%;
+        background-position: 50% 50%;
+        transition: .3s linear;
       }
     }
   }
@@ -139,18 +155,80 @@ nav {
     background-size:cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    opacity: 0.5;
+    opacity: 0.75;
     -webkit-transition: .1s linear; 
     -moz-transition: .1s linear; 
     -ms-transition: .1s linear; 
     -o-transition: .1s linear; 
     transition: .1s linear; 
+    position: relative;
     &:hover {
       opacity:1;
+      //background-size:150%;
+      background-position: 50% 50%;
+      transition: .3s linear;
+    }
+    .cover {
+      background:$azure-opacity;
+      overflow: hidden; 
+      width:100%;
+      height:100%;
+      opacity:0;
+      transition:.3s linear;
+      margin-bottom:0px;
+      position: relative;
+      bottom:0px;
+      left:0px;
+      display: flex ;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      color: #FFF;
+      font-weight: 600;  
+      -webkit-flex-direction: column; 
+      -ms-flex-direction: column; 
+      flex-direction: column; 
+      h3 {
+        color:#fff;
+        text-content: center;
+        font-size: 18px; 
+      }
+    }
+
+    .cover .cover-content {
+      transform:scale(2, 2);
+      opacity:0;
+      transition:.3s linear;
+      text-align: center;
+      width:70%;
+      position: relative;
+      margin:auto;
+      span {
+        font-size: 14px; 
+        line-height: 1.3; 
+      }
+      a {
+        margin:auto;
+        padding:0;
+        
+      }
+    }
+    
+    &:hover .cover{
+      opacity:1;
+      //overflow: hidden;
+    }
+    &:hover .cover .cover-content {
+      opacity: 0.8;
+      transform: scale(1,1);
+    }
+    .line {
+      width:8vw;
+      border-top:1px #fff solid;
+      margin:10px auto;
     }
   }
-  
-
 }
 .intro-gray {
   background: $pale-grey; 
@@ -162,16 +240,69 @@ nav {
   position: fixed;
   top: 0px;
   left: 0px;
-  display:none;  
+  display:flex;
+  align-items:center;
+  padding:20px;
 }
+.previous, .next{
+  padding:25px;
+  color: #FFF;   
+  z-index:3; 
+  .avatar {
+    //@extend .bg-img;
+    width: $slider-avatar;
+    height: $slider-avatar;
+    border-radius:100px;
+    background: #fff;  
+    -webkit-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
+    background-position: 50% 50%; 
+    background-repeat: no-repeat; 
+    margin:auto;
+  }
+  .title {
+    font-size: 14px; 
+  }
+}
+
 .modal {
   position: relative;
   background: #FFF;
   -webkit-border-radius: 6px; 
   border-radius: 6px;
-  width:75%;
+  width:72%;
   margin:8% auto;
   height:75vh;
+  overflow: hidden;
+  
+  .modal-content {
+    width:100%;
+    height:100%;
+    display:flex;
+    overflow: hidden;
+    .modal-content-block {
+      flex:1;
+      display:flex;
+      align-items:center;
+      height: 100%;
+      background-size:cover;
+      border:0;
+      background-repeat: no-repeat;
+      background-position: 50% 100%;  
+    }
+  }
+  button.close {
+    outline:none;
+    background: transparent;
+    padding: 10px;
+    width:40px;
+    height:40px;
+    border:0px;
+    position: absolute;
+    top:6px;
+    right:10px;
+  }
 }
 .modal-bg {
   background:rgba(0,0,0,0.3);
@@ -183,6 +314,96 @@ nav {
 }
 .title {
   padding:9% 15%;
+}
+.left {
+  
+}
+.modal-left-gray {
+  border-radius:6px;
+  background: #eee;
+  width:85%;
+  height:70%;
+  margin:auto;
+  margin-left: 10%;
+  padding: 7%;
+  display: flex;
+  -webkit-flex-direction: column;
+   -ms-flex-direction: column;
+   flex-direction: column;
+  .modal-title-all {
+    display:flex;
+    width:100%;
+    height:18%;
+    align-items:center;
+    margin-bottom:6%;
+    font-size: 14px; 
+    .modal-title {
+      color:$coral-pink;
+      width: 80%; 
+    }
+    .modal-department {
+      width:20%;
+      height:100%;
+      display:flex;
+      justify-content:center;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      align-items:center;
+      img {
+        width:36px;
+      }
+      h5 {
+        margin:0px auto;
+      }
+    }
+  }
+  .modal-name {
+    h3 {
+      font-size: 24px; 
+      span {
+        font-size: 16px; 
+      }
+    }
+  }
+  .modal-tab {
+    border:1px $azure solid;
+    -webkit-border-radius: 4px; 
+    border-radius: 4px;
+    //background:#fff; 
+    height:32px; 
+    display: flex; 
+    width: 100%;
+    margin:7% 0; 
+    .tab-unit {
+      flex: 1; 
+      line-height: 30px;
+      color: $azure;
+      text-align: center; 
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .active {
+      background: $azure;
+      color: #FFF;
+    }
+  }
+  .modal-intro {
+    font-size: 14px; 
+    color: #333;
+    //margin-top:5%;
+  }
+  .modal-case {
+    display:none;
+    font-size: 14px; 
+    ul{
+      margin:0;
+      color: #333;  
+      li{
+        margin:0;
+      }
+    }
+  }
 }
 @media screen and (max-width:768px){
 
