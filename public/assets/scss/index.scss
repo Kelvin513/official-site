@@ -373,6 +373,22 @@ footer {
   background-color: $azure;
   height: 376px;
   color: white;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url(/assets/img/common/wave.svg);
+    top: -50px;
+    width: 100%;
+    height: 58px;
+  }
+
+  h4 {
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: white;
+  }
 }
 
 
