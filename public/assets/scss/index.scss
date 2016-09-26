@@ -1,7 +1,7 @@
-
-
 @charset "UTF-8";
+@import 'variable';
 @import 'layout';
+@import 'about';
 @media screen and (max-width:768px){
 
 }
@@ -208,6 +208,14 @@ nav {
   height: 516px;
   background-color: $pale-grey;
   padding-top: 22px;
+
+  h3 {
+    margin-top: 25px;
+  }
+
+  img {
+    margin-top: 80px;
+  }
 }
 
 // 瞭解更多
@@ -257,35 +265,114 @@ nav {
       margin-top: 50px;
     }
   }
+}
 
-  .section-7-2 {
-    background-color: $light-grey;
-    height: 300px;
-    margin-top: -75px;
+.section-7-2 {
+  background-color: $light-grey;
+  height: 300px;
 
-    .container {
-      padding-top: 105px;
-    }
+  .container {
+    padding-top: 105px;
   }
 }
 
 .section-8 {
-  height: 436px ;
+  height: 436px;
+  padding-top: 70px;
+  
+  .dialog {
+    position: relative;
+    z-index: -1;
 
+    h4 {
+      width: 252px;
+      position: absolute;
+      top: 30px;
+      left: 27px;
+    }
+    
+    .avatar {
+      margin: 6px 0 0 16px;
+      float: left;
+    }
+
+    .h4 {
+      color: $azure;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    h5 {
+      margin: 0;
+      color: $coral-pink;
+      vertical-align: middle;
+    }
+
+    .dia-info {
+      padding: 25px 0 0 110px;
+    }
+
+  }
 }
 
+// FQA
 .section-9 {
-  // not sure
+  padding-top: 22px;
   height: 438px;
   background-color: #D0EFFC;
+
+  h3 {
+    margin-top: 40px;
+  }
+
+  h4 {
+    margin-top: 20px;
+    width: 500px;
+  }
 }
 
 .section-10 {
   height: 436px;
+  
+  .container {
+    width: 1184px;
+  }
+
+  .flex-1 {
+    margin-top: 70px;
+  }
+
+  h4 {
+    width: 459px;
+    margin: 30px auto 0 auto;
+  }
+
+  .vr {
+    box-shadow: 2px 0 0 0 $robin-egg-blue;
+  }
+
+  .call-btn {
+    border-style: none;
+    margin: 50px auto 0 auto;
+  }
+
+  .subscribe {
+    height: 47px;
+    background-color: #EAF4FC;
+    border-radius: 50em;
+    border-style: none;
+    padding-left: 25px;
+    width: 280px;
+    margin-right: -60px;
+    outline: none;
+    color: #242424;
+  }
 }
 
 footer {
-
+  background-color: $azure;
+  height: 376px;
+  color: white;
 }
 
 

@@ -48,6 +48,10 @@ h5 {
   font-weight: 400;
 }
 
+.center {
+  text-align: center;
+}
+
 .flex {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,6 +100,12 @@ h5 {
           justify-content: space-between;
 }
 
+.flex-col {
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .ghost {
   height: 58px;
 }
@@ -111,6 +121,218 @@ h5 {
   color: #ff5f74;
   margin: 12px 0 7px 0;
   line-height: 20px;
+}
+
+nav a {
+  color: #008EFF;
+}
+
+.department {
+  height: 20vh;
+  width: 100%;
+  background: #f5f8fa;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0% 10%;
+  position: relative;
+}
+
+.department .dep-unit {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  color: #008EFF;
+  font-size: 14px;
+  font-weight: 600;
+  transition: .2s ease-in-out;
+  opacity: 0.3;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.department .dep-unit p {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.department .dep-unit:hover {
+  opacity: 1;
+}
+
+.department .active {
+  opacity: 1;
+}
+
+.sec-padding, .sec-intro {
+  padding: 3% 10%;
+}
+
+.sec-intro {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sec-intro .intro {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 3vw;
+}
+
+.sec-intro .intro h3 {
+  color: #008EFF;
+}
+
+.sec-intro .intro img {
+  width: 100%;
+}
+
+.sec-intro .member {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  padding-left: 2vh;
+}
+
+.sec-intro .member .member-unit {
+  width: 18%;
+  padding: 1.5vh;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  cursor: pointer;
+}
+
+.sec-intro .member .member-unit .avatar {
+  border-radius: 100px;
+  height: 10vw;
+  width: 10vw;
+  position: relative;
+  background: #90DEFF;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.sec-intro .member .member-unit p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.sec-intro .member .member-unit .more {
+  color: #999;
+  margin-top: 0;
+}
+
+.sec-intro .member .member-unit .cover {
+  background: #008EFF;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  opacity: 0.6;
+  transition: .2s linear;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.sec-intro .member .member-unit:hover .cover {
+  height: 100%;
+}
+
+.sec-intro .member .member-unit:hover .avator {
+  background-size: 150%;
+}
+
+.sec-works {
+  background: #fff;
+}
+
+.sec-works .work {
+  width: 20%;
+  height: 20vw;
+  background: #999;
+  float: left;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.5;
+  transition: .1s linear;
+}
+
+.sec-works .work:hover {
+  opacity: 1;
+}
+
+.intro-gray {
+  background: #f5f8fa;
+}
+
+.modal-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+.modal {
+  position: relative;
+  background: #FFF;
+  border-radius: 6px;
+  width: 75%;
+  margin: 8% auto;
+  height: 75vh;
+}
+
+.modal-bg {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.title {
+  padding: 9% 15%;
 }
 
 nav {
@@ -333,6 +555,14 @@ nav .content .action:hover {
   padding-top: 22px;
 }
 
+.section-5 h3 {
+  margin-top: 25px;
+}
+
+.section-5 img {
+  margin-top: 80px;
+}
+
 .section-6 {
   height: 135px;
   -webkit-justify-content: center;
@@ -382,25 +612,108 @@ nav .content .action:hover {
   margin-top: 50px;
 }
 
-.section-7 .section-7-2 {
+.section-7-2 {
   background-color: #f1f2f3;
   height: 300px;
-  margin-top: -75px;
 }
 
-.section-7 .section-7-2 .container {
+.section-7-2 .container {
   padding-top: 105px;
 }
 
 .section-8 {
   height: 436px;
+  padding-top: 70px;
+}
+
+.section-8 .dialog {
+  position: relative;
+  z-index: -1;
+}
+
+.section-8 .dialog h4 {
+  width: 252px;
+  position: absolute;
+  top: 30px;
+  left: 27px;
+}
+
+.section-8 .dialog .avatar {
+  margin: 6px 0 0 16px;
+  float: left;
+}
+
+.section-8 .dialog .h4 {
+  color: #008EFF;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.section-8 .dialog h5 {
+  margin: 0;
+  color: #ff5f74;
+  vertical-align: middle;
+}
+
+.section-8 .dialog .dia-info {
+  padding: 25px 0 0 110px;
 }
 
 .section-9 {
+  padding-top: 22px;
   height: 438px;
   background-color: #D0EFFC;
 }
 
+.section-9 h3 {
+  margin-top: 40px;
+}
+
+.section-9 h4 {
+  margin-top: 20px;
+  width: 500px;
+}
+
 .section-10 {
   height: 436px;
+}
+
+.section-10 .container {
+  width: 1184px;
+}
+
+.section-10 .flex-1 {
+  margin-top: 70px;
+}
+
+.section-10 h4 {
+  width: 459px;
+  margin: 30px auto 0 auto;
+}
+
+.section-10 .vr {
+  box-shadow: 2px 0 0 0 #90DEFF;
+}
+
+.section-10 .call-btn {
+  border-style: none;
+  margin: 50px auto 0 auto;
+}
+
+.section-10 .subscribe {
+  height: 47px;
+  background-color: #EAF4FC;
+  border-radius: 50em;
+  border-style: none;
+  padding-left: 25px;
+  width: 280px;
+  margin-right: -60px;
+  outline: none;
+  color: #242424;
+}
+
+footer {
+  background-color: #008EFF;
+  height: 376px;
+  color: white;
 }
