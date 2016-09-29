@@ -354,6 +354,7 @@ nav {
   .call-btn {
     border-style: none;
     margin: 50px auto 0 auto;
+    outline: none;
   }
 
   .subscribe {
@@ -374,6 +375,7 @@ footer {
   height: 376px;
   color: white;
   position: relative;
+  padding: 50px 0 0 0;
 
   &:before {
     content: "";
@@ -388,6 +390,17 @@ footer {
     font-weight: 600;
     margin-bottom: 16px;
     color: white;
+  }
+
+  a, h5 {
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    line-height: 1.7;
+  }
+
+  .footer-section {
+    width: 200px;
   }
 }
 
