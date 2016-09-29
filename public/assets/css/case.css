@@ -445,6 +445,7 @@ nav a {
   overflow: hidden;
   flex-wrap: wrap;
   transition: .15s ease-in-out;
+  cursor: pointer;
 }
 
 .case-card-md .card-img {
@@ -495,99 +496,7 @@ nav a {
 }
 
 .case-card-md:hover {
-  transform: scale(1.15, 1.15);
-}
-
-.sec-works {
-  background: #fff;
-}
-
-.sec-works .work {
-  width: 20%;
-  height: 20vw;
-  background: #999;
-  float: left;
-  margin: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 0.75;
-  -webkit-transition: .1s linear;
-  -moz-transition: .1s linear;
-  -ms-transition: .1s linear;
-  -o-transition: .1s linear;
-  transition: .1s linear;
-  position: relative;
-}
-
-.sec-works .work:hover {
-  opacity: 1;
-  background-position: 50% 50%;
-  transition: .3s linear;
-}
-
-.sec-works .work .cover {
-  background: rgba(0, 142, 255, 0.5);
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: .3s linear;
-  margin-bottom: 0px;
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #FFF;
-  font-weight: 600;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.sec-works .work .cover h3 {
-  color: #fff;
-  text-content: center;
-  font-size: 18px;
-}
-
-.sec-works .work .cover .cover-content {
-  transform: scale(2, 2);
-  opacity: 0;
-  transition: .3s linear;
-  text-align: center;
-  width: 70%;
-  position: relative;
-  margin: auto;
-}
-
-.sec-works .work .cover .cover-content span {
-  font-size: 14px;
-  line-height: 1.3;
-}
-
-.sec-works .work .cover .cover-content a {
-  margin: auto;
-  padding: 0;
-}
-
-.sec-works .work:hover .cover {
-  opacity: 1;
-}
-
-.sec-works .work:hover .cover .cover-content {
-  opacity: 0.8;
-  transform: scale(1, 1);
-}
-
-.sec-works .work .line {
-  width: 8vw;
-  border-top: 1px #fff solid;
-  margin: 10px auto;
+  transform: scale(1.1, 1.1);
 }
 
 .intro-gray {
@@ -600,64 +509,64 @@ nav a {
   position: fixed;
   top: 0px;
   left: 0px;
-  display: none;
   align-items: center;
+  display: flex;
   padding: 20px;
-}
-
-.previous, .next {
-  padding: 25px;
-  color: #FFF;
-  z-index: 3;
-  width: 10%;
-  justify-content: center;
-}
-
-.previous .avatar, .next .avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 100px;
-  background: #fff;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  margin-left: 0;
-}
-
-.previous .title, .next .title {
-  font-size: 14px;
-  margin: 0;
-}
-
-.previous img.arrow, .next img.arrow {
-  width: 20px;
-  margin: auto;
-  margin-left: 25px;
+  margin-top: calc(8% - 50px);
+  margin-left: -5%;
 }
 
 .modal {
   position: relative;
   background: #FFF;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  width: 72%;
+  width: 55%;
   margin: 8% auto;
-  height: 75vh;
-  overflow: hidden;
+  margin-left: 30%;
+  height: 55vh;
+}
+
+.modal .modal-pic-out {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-pic-out .case-card-md {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  width: 40%;
+  height: 70%;
+}
+
+.modal .modal-pic-out .case-card-md .card-img {
+  height: 65%;
+}
+
+.modal .modal-pic-out .case-card-md .case-icon {
+  top: calc(65% - 17px);
+}
+
+.modal .modal-pic-out .case-card-md .case-content {
+  height: 100%;
+}
+
+.modal .modal-pic-out .case-card-md:hover {
+  transform: scale(1, 1);
 }
 
 .modal .modal-content {
-  width: 100%;
+  width: 70%;
   height: 100%;
+  margin-left: 26.5%;
   display: flex;
+  margin-top: calc(3% + 20px);
   overflow: hidden;
 }
 
 .modal .modal-content .modal-content-block {
   flex: 1;
-  display: flex;
   align-items: center;
   height: 100%;
   background-size: cover;
@@ -678,6 +587,11 @@ nav a {
   right: 10px;
 }
 
+.modal .modal-service h4 {
+  font-weight: 600;
+  margin-top: 10%;
+}
+
 .modal-bg {
   background: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -687,104 +601,23 @@ nav a {
   left: 0px;
 }
 
-.title {
-  padding: 9% 15%;
-}
-
-.modal-left-gray {
-  border-radius: 6px;
-  background: #eee;
-  width: 85%;
-  height: 70%;
-  margin: auto;
-  margin-left: 10%;
-  padding: 7%;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.modal-left-gray .modal-title-all {
-  display: flex;
-  width: 100%;
-  height: 18%;
-  align-items: center;
-  margin-bottom: 6%;
-  font-size: 14px;
-}
-
-.modal-left-gray .modal-title-all .modal-title {
-  color: #ff5f74;
-  width: 80%;
-}
-
-.modal-left-gray .modal-title-all .modal-department {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-}
-
-.modal-left-gray .modal-title-all .modal-department img {
-  width: 36px;
-}
-
-.modal-left-gray .modal-title-all .modal-department h5 {
-  margin: 0px auto;
-}
-
-.modal-left-gray .modal-name h3 {
-  font-size: 24px;
-}
-
-.modal-left-gray .modal-name h3 span {
-  font-size: 16px;
-}
-
-.modal-left-gray .modal-tab {
+.service-tag {
   border: 1px #008EFF solid;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  height: 32px;
-  display: flex;
-  width: 100%;
-  margin: 7% 0;
-}
-
-.modal-left-gray .modal-tab .tab-unit {
-  flex: 1;
-  line-height: 30px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.6% 2.5%;
   color: #008EFF;
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: .1s linear;
 }
 
-.modal-left-gray .modal-tab .active {
+.service-tag:hover {
   background: #008EFF;
   color: #FFF;
 }
 
-.modal-left-gray .modal-intro {
-  font-size: 14px;
-  color: #333;
-}
-
-.modal-left-gray .modal-case {
-  display: none;
-  font-size: 14px;
-}
-
-.modal-left-gray .modal-case ul {
-  margin: 0;
-  color: #333;
-}
-
-.modal-left-gray .modal-case ul li {
-  margin: 0;
+.title {
+  padding: 9% 15%;
 }
