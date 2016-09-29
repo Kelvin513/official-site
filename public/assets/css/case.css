@@ -611,6 +611,7 @@ nav a {
   margin-top: 10px;
   display: inline-block;
   transition: .1s linear;
+  z-index: 5;
 }
 
 .service-tag:hover {
