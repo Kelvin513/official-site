@@ -370,17 +370,18 @@ nav a {
   color: #008EFF;
 }
 
-.department {
-  height: 20vh;
+.category {
+  height: 15vh;
   width: 100%;
-  background: #f5f8fa;
   display: flex;
-  padding: 0% 10%;
+  padding: 0% 16%;
   position: relative;
+  border: 2px #f1f8fc solid;
+  justify-content: center;
 }
 
-.department .dep-unit {
-  width: 10%;
+.category .cate-unit {
+  flex: 1;
   height: 100%;
   position: relative;
   text-align: center;
@@ -388,7 +389,7 @@ nav a {
   font-size: 14px;
   font-weight: 600;
   transition: .2s ease-in-out;
-  opacity: 0.3;
+  opacity: 0.45;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -396,126 +397,105 @@ nav a {
   justify-content: center;
 }
 
-.department .dep-unit p {
+.category .cate-unit p {
   padding-top: 0px;
-  margin-top: 0px;
+  margin: 0px;
+  margin-top: 1.2vh;
+  color: #0a2f54;
 }
 
-.department .dep-unit:hover {
+.category .cate-unit:hover {
   opacity: 1;
 }
 
-.department .active {
+.category .cate-unit img {
+  width: 28px;
+  margin: 0px auto;
+}
+
+.category .active {
+  opacity: 1;
+  box-shadow: 0 20px 0 -18px #008EFF;
+}
+
+.category .catalog {
   opacity: 1;
 }
 
-.sec-padding, .sec-intro {
+.sec-padding {
   padding: 3% 10%;
 }
 
-.sec-intro {
+.sec-cases {
+  padding: 3% 9%;
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.sec-intro .intro {
-  flex: 1;
-  padding-right: 3vw;
-}
-
-.sec-intro .intro h3 {
-  color: #008EFF;
-}
-
-.sec-intro .intro img {
-  width: 100%;
-}
-
-.sec-intro .member {
-  flex: 1;
+.case-card-md {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #f4f5f9;
   position: relative;
-  padding-left: 2vh;
-}
-
-.sec-intro .member .member-unit {
-  width: 18%;
-  padding: 1.5vh;
+  width: 312px;
+  height: 332px;
+  margin: 1.2vw;
   display: inline-flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  cursor: pointer;
   overflow: hidden;
+  flex-wrap: wrap;
+  transition: .15s ease-in-out;
 }
 
-.sec-intro .member .member-unit .avatar {
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  height: 10vw;
-  width: 10vw;
-  position: relative;
-  background: #90DEFF;
-  background-size: cover;
-  overflow: hidden;
-  transition: .3s linear;
-}
-
-.sec-intro .member .member-unit p {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.sec-intro .member .member-unit .more {
-  color: #999;
-  margin-top: 0;
-}
-
-.sec-intro .member .member-unit .cover {
-  background: #008EFF;
-  overflow: hidden;
+.case-card-md .card-img {
+  height: 224px;
   width: 100%;
-  height: 100%;
-  border-radius: 100px;
-  opacity: 0;
-  transition: .3s linear;
-  margin-bottom: 0px;
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #FFF;
-  font-weight: 600;
-}
-
-.sec-intro .member .member-unit .cover span {
-  transform: scale(2, 2);
-  opacity: 0;
-  transition: .3s linear;
-}
-
-.sec-intro .member .member-unit:hover .cover {
-  opacity: 0.5;
   overflow: hidden;
-}
-
-.sec-intro .member .member-unit:hover .cover span {
-  opacity: 1;
-  transform: scale(1, 1);
-}
-
-.sec-intro .member .member-unit:hover .avatar {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-position: 50% 50%;
-  transition: .3s linear;
+}
+
+.case-card-md .case-icon {
+  background: #ff5f74;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 20px;
+  top: 204px;
+}
+
+.case-card-md .case-icon img {
+  width: 35px;
+}
+
+.case-card-md .case-content {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  text-align: center;
+}
+
+.case-card-md .case-content h3 {
+  font-size: 20px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.case-card-md .case-content h5 {
+  margin: 0px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.case-card-md .case-content span.money {
+  color: #ff5f74;
+}
+
+.case-card-md:hover {
+  transform: scale(1.15, 1.15);
 }
 
 .sec-works {

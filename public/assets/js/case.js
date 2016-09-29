@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $(".number-20").animateNumbers(20, true, 2800);
   $(".number-100").animateNumbers(100, true, 3800);
-  $(".member-unit").click(function(){
+  $(".case-card").click(function(){
     $(".modal-wrap").fadeIn(300)
     $(".modal-wrap").css("display","flex");
     $(".modal").fadeIn(300);

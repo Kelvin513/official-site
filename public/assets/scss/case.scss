@@ -1,7 +1,6 @@
 @charset "UTF-8";
-//@import 'variable';
 @import 'index';
-//@import 'layout';
+
 $slider-avatar:70px;
 
 nav {
@@ -10,16 +9,18 @@ nav {
     color:#008EFF;
   }
 }
-.department {
-  height: 20vh; 
+.category {
+  height: 15vh; 
   width: 100%;
-  background:$pale-grey;
+  //background:$pale-grey;
   display:flex;
-  padding:0% 10%;
-  
+  padding:0% 16%;
   position:relative;
-  .dep-unit {
-    width:10%;
+  border:2px $border-blue solid;
+  justify-content:center;
+  .cate-unit {
+    
+    flex:1;
     height:100%;
     position:relative;
     text-align:center;
@@ -27,123 +28,109 @@ nav {
     font-size: 14px; 
     font-weight: 600;
     transition: .2s ease-in-out;
-    opacity:0.3;
+    opacity:0.45;
     display:flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content:center;
-
+    
     p {
       padding-top:0px;
-      margin-top:0px;
+      margin:0px;
+      margin-top:1.2vh;
+      color: $deep-blue; 
     }
     &:hover {
       opacity:1;
     }
+    img{
+      width:28px;
+      margin:0px auto;
+      //margin:0px;
+    }
   }
   .active {
     opacity:1;
+    box-shadow:0 20px 0 -18px $azure;
+  }
+  .catalog {
+    opacity: 1;
   }
 }
 .sec-padding {
   padding: 3% 10%;
 }
-.sec-intro {
-  @extend .sec-padding;
-  display: flex; 
-  .intro {
-    flex: 1;
-    padding-right: 3vw;
-    h3{
-      color: $azure;
-    }
+//////// section-case /////////
+.sec-cases {
+  padding:3% 9%;
+  display: flex;
+  //-webkit-justify-content: left;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  
+}
 
+.case-card-md {
+  -webkit-border-radius: 6px; 
+  border-radius: 6px;
+  background: $blue-gray;
+  position: relative;
+  width: 312px;
+  height: 332px; 
+  margin: 1.2vw;
+  display: inline-flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  transition:.15s ease-in-out;
+   
+  .card-img {
+    height: 224px;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+    background-position: 50% 50%; 
+  }
+  .case-icon {
+    background: $coral-pink;
+    width:35px;
+    height:35px;
+    position: absolute;
+    right: 20px;
+    top: 204px;
     img {
-      width:100%;
+      width:35px;
+    } 
+  }
+  .case-content {
+    width:100%;
+    padding:10px;
+    height:100%;
+    text-align: center;
+    h3{
+      font-size: 20px;
+      margin:0px;
+      margin-top:10px;
+    }
+    h5 {
+      margin:0px;
+      margin-top:10px;
+      font-size: 16px; 
+    }
+    span.money {
+      color: $coral-pink; 
     }
   }
-  .member {
-    flex: 1;
-    position: relative;
-    padding-left:2vh;
-    .member-unit {
-      width: 18%;
-      padding: 1.5vh;
-      display: inline-flex;
-      position: relative;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      justify-content:center;
-      -webkit-align-items: center;
-      align-items: center;
-      cursor:pointer;
-      overflow: hidden;
-      .avatar {
-        -webkit-border-radius: 100px; 
-        border-radius: 100px;
-        height: 10vw;
-        width: 10vw;
-        position: relative;
-        background: $robin-egg-blue; 
-        background-size: cover;
-        overflow: hidden;
-        transition:.3s linear;
-      }
-      p {
-        text-align: center;
-        padding:0;
-        margin:0;
-        margin-top:10px;
-        font-size: 14px;
-      }
-      .more {
-        color: $gray;
-        margin-top:0; 
-      }
-      .cover {
-        background:$azure;
-        overflow: hidden; 
-        width:100%;
-        height:100%;
-        border-radius:100px;
-        opacity:0;
-        transition:.3s linear;
-        margin-bottom:0px;
-        position: relative;
-        bottom:0px;
-        left:0px;
-        display: flex ;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        color: #FFF;
-        font-weight: 600;  
-      }
-      .cover span {
-        transform:scale(2, 2);
-        opacity:0;
-        transition:.3s linear;
-      }
-      &:hover .cover{
-        opacity:0.5;
-        overflow: hidden;
-      }
-      &:hover .cover span {
-        opacity:1;
-        transform:scale(1,1);
-      }
-      
-      &:hover .avatar {
-        //background-size:120%;
-        background-position: 50% 50%;
-        transition: .3s linear;
-      }
-    }
+  &:hover {
+    transform: scale(1.15, 1.15); 
   }
 }
+
+
+
 .sec-works {
   background: #fff; 
   .work {
@@ -297,7 +284,7 @@ nav {
       background-size:cover;
       border:0;
       background-repeat: no-repeat;
-      background-position: 50% 0%;  
+      background-position: 50% 0%;
     }
   }
   button.close {
